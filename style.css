@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  color: #eaeaff;
+}
+
+.page {
+  display: none;
+  height: 100vh;
+  padding: 40px;
+  text-align: center;
+  animation: fade 1.2s ease;
+}
+
+.page.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PAGE BACKGROUNDS */
+.page1 {
+  background: radial-gradient(circle, #1c1c2b, #000);
+}
+
+.page2 {
+  background: radial-gradient(circle, #2b1c1c, #000);
+}
+
+.page3 {
+  background: radial-gradient(circle, #1c2b26, #000);
+}
+
+.page4 {
+  background: radial-gradient(circle, #2a1c2b, #000);
+}
+
+.page5 {
+  background: radial-gradient(circle, #0f2027, #000);
+}
+
+h1 {
+  color: #9fa8ff;
+  text-shadow: 0 0 25px #6b78ff;
+}
+
+p {
+  max-width: 700px;
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+button {
+  margin-top: 30px;
+  padding: 14px 34px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffffff, #b8c6ff);
+  box-shadow: 0 0 20px rgba(180,190,255,0.6);
+}
+
+.sad-btn {
+  background: linear-gradient(135deg, #ffd6d6, #ff9aa2);
+  animation: pulse 1.5s infinite;
+}
+
+.final-text {
+  font-size: 1.3rem;
+}
+
+.soft {
+  margin-top: 20px;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* EMOJI RAIN */
+.emoji {
+  position: fixed;
+  top: -10px;
+  font-size: 24px;
+  animation: fall linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
